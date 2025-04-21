@@ -20,7 +20,7 @@ const StartInterview = ({ params }) => {
   const GetInterviewDetails = async () => {
     const result = await db
       .select()
-      .from(MockInterview)
+      .from(mockInterview)
       .where(eq(MockInterview.mockId, params.interviewId));
 
     const jsonMockResp = JSON.parse(result[0].jsonMockResp);
